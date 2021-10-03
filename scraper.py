@@ -17,7 +17,7 @@ def scrapeWikiArticle(url): # for creating an endless scraper
 	linkToScrape = 0
 
 	for link in allLinks:
-		# We are only interested in other wiki articles
+		# only for the wiki articles
 		if link['href'].find("/wiki/") == -1: 
 			continue
 
