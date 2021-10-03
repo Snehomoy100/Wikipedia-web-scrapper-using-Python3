@@ -1,3 +1,6 @@
+# Wikipedia title web scapper using Python3
+# Made by- Snehomoy100 (https://github.com/Snehomoy100/)
+
 import requests
 from bs4 import BeautifulSoup
 import random
@@ -12,7 +15,7 @@ def scrapeWikiArticle(url): # for creating an endless scraper
 	title = soup.find(id="firstHeading")
 	print(title.text)
 
-	allLinks = soup.find(id="bodyContent").find_all("a")
+	allLinks = soup.find(id="bodyContent").find_all("a") # for finding random <a></a> tags
 	random.shuffle(allLinks)
 	linkToScrape = 0
 
